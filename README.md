@@ -81,6 +81,7 @@ jurisdiction's rules before filing.
 ├── LICENSE                  — MIT
 ├── README.md
 ├── CONTRIBUTING.md
+├── CHANGELOG.md
 ├── src/
 │   ├── main.rs              — binary entry point
 │   ├── lib.rs               — library root
@@ -109,6 +110,20 @@ cargo test
 
 26 integration tests cover the inventory engine, database migration, and
 CSV round-tripping. The GUI layer is exercised manually.
+
+## Roadmap
+
+Planned for future releases:
+
+- **Live crypto prices** — fetch current prices from the web so the
+  Portfolio view can show real-time market value of holdings alongside
+  cost basis. Will be opt-in, keeping the app fully functional offline.
+- **Assisted coin conversions** — when recording a conversion, fetch the
+  market rate automatically to calculate the disposal gain and the new
+  lot's cost basis, instead of requiring manual entry of the fiat value.
+
+If you'd like to influence priorities, open an issue describing your use
+case.
 
 ## License
 
