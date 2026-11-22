@@ -6,9 +6,6 @@ rust-version = "1.85"
 
 [dependencies]
 eframe = "0.28"
-rusqlite = {
-    version = "0.31",
-    features = ["bundled"]
-}
+rusqlite = { version = "0.31", features = ["bundled"] }
 chrono = "0.4"
 rfd = "0.17"
