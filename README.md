@@ -5,6 +5,9 @@ built in Rust. All data stays on your machine in a local SQLite database —
 no accounts, no cloud, no telemetry.
 
 ![CI](https://github.com/Lawyneer/crypto_inventory/actions/workflows/ci.yml/badge.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Rust 1.85+](https://img.shields.io/badge/rust-1.85%2B-orange.svg)
+![Release](https://img.shields.io/github/v/tag/Lawyneer/crypto_inventory)
 
 ## Features
 
