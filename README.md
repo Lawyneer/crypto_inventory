@@ -29,6 +29,18 @@ no accounts, no cloud, no telemetry.
 - **CSV import/export** — transactions, realized gains, and tax lots, with a
   native file-open dialog on import.
 
+## Downloading
+
+Pre-built binaries for Windows and macOS are available on the
+[Releases page](https://github.com/Lawyneer/crypto_inventory/releases).
+No Rust toolchain required.
+
+- **Windows**: download the `.exe`, run it (SmartScreen may ask you to
+  confirm — choose "More info" → "Run anyway"; the binary is unsigned).
+- **macOS (Apple Silicon)**: download the `macos_arm64` binary and mark it
+  executable (`chmod +x`) in Terminal before first run.
+- **Linux**: build from source — see below.
+
 ## Building
 
 Requires Rust 1.85 or later (edition 2024).
