@@ -70,25 +70,33 @@ jurisdiction's rules before filing.
 
 ```
 .
+├── .github/workflows/ci.yml — CI: build + test on every push/PR
+├── .gitignore               — excludes build output, local database, exports
+├── Cargo.toml               — manifest (bin + lib targets)
+├── Cargo.lock               — locked dependency versions (committed)
+├── rust-toolchain.toml      — pins the Rust toolchain for builds & CI
+├── LICENSE                  — MIT
+├── README.md
+├── CONTRIBUTING.md
 ├── src/
-│   ├── main.rs    — binary entry point
-│   ├── lib.rs     — library root
-│   ├── app.rs     — application state and logic
-│   ├── ui.rs      — egui panels
-│   ├── model.rs   — domain types
-│   ├── ledger.rs  — inventory engine (FIFO/LIFO/HIFO replay)
-│   ├── db.rs      — SQLite schema and migration
-│   └── csv_io.rs  — CSV parsing and export
+│   ├── main.rs              — binary entry point
+│   ├── lib.rs               — library root
+│   ├── app.rs               — application state and logic
+│   ├── ui.rs                — egui panels
+│   ├── model.rs             — domain types
+│   ├── ledger.rs            — inventory engine (FIFO/LIFO/HIFO replay)
+│   ├── db.rs                — SQLite schema and migration
+│   └── csv_io.rs            — CSV parsing and export
 └── tests/
-    ├── model_tests.rs   — enums and formatting
-    ├── ledger_tests.rs  — inventory engine and accounting rules
-    ├── csv_io_tests.rs  — CSV parsing and round-trips
-    └── db_tests.rs      — schema, migration, idempotency
+    ├── model_tests.rs       — enums and formatting
+    ├── ledger_tests.rs      — inventory engine and accounting rules
+    ├── csv_io_tests.rs      — CSV parsing and round-trips
+    └── db_tests.rs          — schema, migration, idempotency
 ```
 
 The core modules — model, ledger, db, and csv_io — are pure (no GUI code)
 and reusable in other projects; app and ui hold the eframe/egui application
-layer.
+layer. Builds and CI use the Rust toolchain pinned in rust-toolchain.toml.
 
 ## Testing
 
