@@ -1,0 +1,8 @@
+src/
+├── main.rs      — binary entry point (wires eframe)
+├── app.rs       — App state + all logic orchestration (GUI-aware, no drawing)
+├── ui.rs        — every panel, the nav bar, the eframe::App impl
+├── model.rs     — domain types + enums + formatting (pure, reusable)
+├── ledger.rs    — lot engine + ledger replay (pure, reusable)
+├── db.rs        — schema + migration (pure rusqlite, reusable)
+└── csv_io.rs    — CSV read/write helpers (pure, reusable)

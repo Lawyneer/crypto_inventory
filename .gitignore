@@ -1,0 +1,25 @@
+# Build artifacts
+/target
+
+# Local databases (user data — never commit)
+crypto_tracker.db
+crypto_tracker.db-wal
+crypto_tracker.db-shm
+*.db-journal
+
+# Exported CSV files
+transactions_*.csv
+realized_gains_*.csv
+tax_lots_*.csv
+
+# Test scratch databases
+crypto_tracker_test_*
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
